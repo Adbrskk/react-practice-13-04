@@ -1,5 +1,10 @@
 import React from "react";
 import { ActionTypes } from "../../state/actions";
+import BaseSelector from "./BaseSelector";
+import SauceSelector from "./SauceSelector";
+import CheeseSelector from "./CheeseSelector";
+import SizeSelector from "./SizeSelector";
+import ToppingsSelector from "./ToppingsSelector";
 
 export default function PizzaBuilder({ state, dispatch }) {
 

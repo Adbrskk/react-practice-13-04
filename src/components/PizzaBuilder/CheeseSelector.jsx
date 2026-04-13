@@ -2,11 +2,13 @@ import React from "react";
 import { ActionTypes } from "../../state/actions";
 
 export default function CheeseSelector({ state, dispatch }) {
+  const cheeses = ["mozzarella", "cheddar", "vegan"];
+
   return (
     <div>
       <h3>Cheese</h3>
 
-      {["mozzarella", "cheddar", "vegan"].map(cheese => {
+      {cheeses.map((cheese) => {
         const isSelected = state.cheese === cheese;
 
         return (
@@ -20,7 +22,9 @@ export default function CheeseSelector({ state, dispatch }) {
             }
             style={{
               margin: 4,
-              background: isSelected ? "orange" : "#eee",
+              padding: "6px 10px",
+              background: isSelected ? "#ff9800" : "#eee",
+              color: isSelected ? "white" : "black",
             }}
           >
             {cheese}
